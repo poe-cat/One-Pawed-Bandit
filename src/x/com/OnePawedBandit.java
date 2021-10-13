@@ -87,22 +87,19 @@ public class OnePawedBandit extends Application {
         primaryStage.setScene(new Scene(gridPane, 700, 350));
         primaryStage.show();
 
-        spinButton.setOnAction(new EventHandler<ActionEvent>() {   //event handler for Button
+        //event handler for Button
+        spinButton.setOnAction(event -> {
 
-            @Override
-            public void handle(ActionEvent event) {
+            emptyField.setVisible(false);
 
-                emptyField.setVisible(false);
+            try {
+                int spinAmt = Integer.parseInt(yourAmount.getText());
 
-                try {
-                    int spinAmt = Integer.parseInt(yourAmount.getText());
-
-                    displayImgAndPoints(getRandomInt(10, 1), getRandomInt(10, 1),
-                            getRandomInt(10, 1), spinAmt);
-                    //txtAmt.setText("");
-                } catch (NumberFormatException e) {
-                    emptyField.setVisible(true);
-                }
+                displayImgAndPoints(getRandomInt(10, 1), getRandomInt(10, 1),
+                        getRandomInt(10, 1), spinAmt);
+                //txtAmt.setText("");
+            } catch (NumberFormatException e) {
+                emptyField.setVisible(true);
             }
         });
     }
