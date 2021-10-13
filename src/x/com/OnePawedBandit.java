@@ -64,6 +64,7 @@ public class OnePawedBandit extends Application {
 
         //button to "spin"
         Button spinButton = new Button();
+        spinButton.setStyle("-fx-background-color: #00cc00;");
         spinButton.setText("SPIN");
 
         //all about money
