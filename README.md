@@ -1,1 +1,1 @@
-Very simple slot machine symulator made in JavaFX.
+Very simple slot machine simulator made in JavaFX.
